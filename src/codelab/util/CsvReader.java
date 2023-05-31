@@ -1,18 +1,15 @@
 package codelab.util;
 
-import codelab.Student;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class CsvReader {
 
-    /** INSTRUCTIONS
-     *
+    /**
+     * INSTRUCTIONS
      * You will find a Comma-Separated Value (CSV) file within this package. It contains CodeLab status for each student
      * who registered for the CodeLab course.
      * Based on number of solution you solved in CodeLab, a message will be generated for you.
@@ -20,36 +17,61 @@ public class CsvReader {
      **/
 
     public static void main(String[] args) {
+        // define the path to the file.
+        String csvFilePath = System.getProperty("user.dir") + "\\src\\CodeLab\\data\\roster.csv";
+        //Read the csv file and obtain the roster
+        List<Student> roster = readCsvFile(csvFilePath);
 
-        String csvFilePath = System.getProperty("user.dir") + "\\src\\codelab\\data\\roster.csv";
-        String row;
+        if (!roster.isEmpty()) { //check if the roster is not empty.
+            generateMessages(roster); // generate message for each student in the roster.
+            // calculate and print the average score in the roster.
+            double averageScore = calculateAverageScore(roster);
+            System.out.println("Average score of the class: " + averageScore);
+        } else {
+            System.out.println("No valid data found in the CSV file.");
+        }
+    }
+    // read the scv file and return a list of students.
+    private static List<Student> readCsvFile(String csvFilePath) {
+        List<Student> roster = new ArrayList<>();
+        String line;
         String csvSplitBy = ",";
         BufferedReader br;
-        List<Student> roster = new ArrayList<>();
 
         try {
             br = new BufferedReader(new FileReader(csvFilePath));
             int lineNumber = 0;
-            while ((row = br.readLine()) != null) {
+            while ((line = br.readLine()) != null) {
                 if (lineNumber == 0) {
                     lineNumber++;
                     continue;
                 }
-                String[] rowArray = row.split(csvSplitBy);
-                roster.add(new Student(rowArray[5].replace("\"", ""), rowArray[4].replace("\"",
-                        ""), Integer.parseInt(rowArray[10])));
+
+                String[] rowArray = line.split(csvSplitBy);// split each line by the scv separator.
+                //check if the row has enough data.
+                if (rowArray.length >= 11) {
+                    // Extract the necessary data and create a new Student object.
+                    String firstName = rowArray[5].replace("\"", "");
+                    String lastName = rowArray[4].replace("\"", "");
+                    int numberOfExercisesSolved = Integer.parseInt(rowArray[10]);
+                    roster.add(new Student(firstName, lastName, numberOfExercisesSolved));
+                }
             }
-        } catch (IOException e) {
+        } catch (IOException | NumberFormatException e) {
             e.printStackTrace();
         }
 
-        Collections.sort(roster);
+        return roster;
+    }
 
+    private static void generateMessages(List<Student> roster) {
         for (Student student : roster) {
-            System.out.println(convertNumberOfProblemsSolved(student));
+            String message = convertNumberOfProblemsSolved(student);
+            System.out.println(message);
         }
     }
 
+    // Convert the number of exercises solved into a message for each student
     private static String convertNumberOfProblemsSolved(Student student) {
         String name = student.getFirstName();
 
@@ -67,4 +89,46 @@ public class CsvReader {
             return "Very low effort. Not a good sign, " + name;
         }
     }
-}
+      // Calculate the average score of the class.
+    private static double calculateAverageScore(List<Student> roster) {
+        if (roster.isEmpty()) {
+            return 0.0;
+        }
+        int totalSolutions = 0;
+        int studentCount = 0;
+        for (Student student : roster) {
+            totalSolutions += student.getNumberOfExercisesSolved();
+            studentCount++;
+        }
+
+        double averageScore = (double) totalSolutions / studentCount;
+            return averageScore;}
+
+
+        private static class Student {
+            private final String firstName;
+            private final String lastName;
+            private final int numberOfExercisesSolved;
+
+            public Student(String firstName, String lastName, int numberOfExercisesSolved) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.numberOfExercisesSolved = numberOfExercisesSolved;
+            }
+
+            public String getFirstName() {
+                return firstName;
+            }
+
+            public String getLastName() {
+                return lastName;
+            }
+
+            public int getNumberOfExercisesSolved() {
+                return numberOfExercisesSolved;
+            }
+        }
+    }
+
+
+
