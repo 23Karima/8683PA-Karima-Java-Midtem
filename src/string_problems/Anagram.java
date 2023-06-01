@@ -21,7 +21,7 @@ public class Anagram {
             word1 = word1.replaceAll("[^a-zA-Z]", "").toLowerCase();
             word2 = word2.replaceAll("[^a-zA-Z]", "").toLowerCase();
 
-            // Check if the lengths of the strings are equal
+            // Check if the lengths of the strings are equals.
             if (word1.length() != word2.length()) {
                 return false;
             }
