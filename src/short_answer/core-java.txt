@@ -1,14 +1,17 @@
 ***ANSWER ALL OF THE QUESTIONS BELOW***
 
 What is a programming language?
-Answer:
+Answer:A programming language is a system of rules for writing instructions that computers can understand and execute.
 
 What is a JDK composed of? Define each components?
 Answer:
-
+1.	Java Compiler (javac): Converts Java source code into bytecode that can be executed by the JVM.
+2.	Java Virtual Machine (JVM): Executes Java bytecode and provides platform independence and memory management.
+3.	Java Runtime Environment (JRE): Includes the JVM and libraries required to run Java applications.
+4.	Development Tools: Tools like javac (Java compiler), java (launches Java applications), javadoc (generates HTML documentation), and jar (packs Java files into archives).
 What is an IDE?
 Answer:
-
+An IDE is a software tool that helps programmers write and manage their code effectively.
 What are some of the most popular Java IDEs available in the market?
 Answer:
 
@@ -161,7 +164,6 @@ Answer:
 
 What is synchronization in Java?
 Answer:
-
 What is a Framework?
 Answer:
 

@@ -2,7 +2,7 @@ package company_app_design;
 
 import java.util.Scanner;
 
-public class EmployeeInfo {
+public class EmployeeInfo  {
 
     /** INSTRUCTIONS
      *
