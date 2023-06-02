@@ -31,4 +31,13 @@ public class Factorial {
         }
         return number * calculateFactorialRecursive(number - 1);
     }
+    // Iterative method to calculate factorial
+    public static long calculateFactorialIterative(int number) {
+        long factorial = 1;
+        for (int i = 2; i <= number; i++) {
+            factorial *= i;
+        }
+        return factorial;
+    }
 }
+
