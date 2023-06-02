@@ -26,7 +26,7 @@ public class DetermineLargestWord {
         // Create a map to store the length of the word as key and the word itself as value
         Map<Integer, String> map = new HashMap<>();
 
-        // Split the sentence into an array of words using space as the delimiter
+        // Split the sentence into an array of words using space as the delimiter .
         String[] words = sentence.split(" ");
 
         // Variable to keep track of the maximum length of a word
