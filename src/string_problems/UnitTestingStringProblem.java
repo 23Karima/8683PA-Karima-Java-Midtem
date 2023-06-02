@@ -55,4 +55,27 @@ public class UnitTestingStringProblem {
         System.out.println("Test passed? " + (result1 == expected1 ? "Yes" : "No"));
         System.out.println();
 
-    }}
+        // Test case 2: Check a non-palindrome string
+        String input2 = "hello";
+        boolean expected2 = false;
+        boolean result2 = palindromeChecker.isPalindrome(input2);
+        System.out.println("Input: " + input2);
+        System.out.println("Expected: " + expected2);
+        System.out.println("Result: " + result2);
+        System.out.println("Test passed? " + (result2 == expected2 ? "Yes" : "No"));
+        System.out.println();
+    }
+}
+
+class StringReversal {
+    public String reverseString(String input) {
+        return new StringBuilder(input).reverse().toString();
+    }
+}
+
+class PalindromeChecker {
+    public boolean isPalindrome(String input) {
+        String reversed = new StringBuilder(input).reverse().toString();
+        return input.equalsIgnoreCase(reversed);
+    }
+}
