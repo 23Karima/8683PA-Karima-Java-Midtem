@@ -15,7 +15,7 @@ public class Anagram {
      */
 
     // Implement Here
-    public class AnagramChecker {
+
         public static boolean isAnagram(String word1, String word2) {
             // Convert the strings to lowercase and remove all non-alphabetic characters
             word1 = word1.replaceAll("[^a-zA-Z]", "").toLowerCase();
@@ -42,5 +42,5 @@ public class Anagram {
             boolean isAnagram = isAnagram(word1, word2);
             System.out.println(word1 + " and " + word2 + " are anagrams: " + isAnagram);
         }
-    }
+
 }
