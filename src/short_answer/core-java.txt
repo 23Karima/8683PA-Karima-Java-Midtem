@@ -54,44 +54,50 @@ Answer:
 Interface: Collection of abstract methods and constant fields, can be implemented by multiple classes.
 Abstract Class: Class with abstract and non-abstract methods, can be extended by a single subclass.
 Can you make an Object from an Interface and Abstract class? If yes or no, how would you do it?
-Answer:
-
+Answer: -No, you cannot directly create an object from an interface or an abstract class. You need to create a concrete class that implements or extends them and then instantiate an object of that concrete class.
 What is Access Modifier?
-Answer:
-
+Answer:-An access modifier is a keyword in object-oriented programming that specifies the level of accessibility of a class, method, or variable, determining whether it can be accessed or modified by other code within the same program or external code.
 What is OOP? Define each OOP concept.
-Answer:
-
+Answer: OOP stands for Object-Oriented Programming, which is a programming paradigm that organizes code around objects, their properties, and their interactions. Here are short definitions of key OOP concepts:
+1.	Class: A blueprint.
+2.	Object: An instance of a class that encapsulates data and methods to interact with that data.
+3.	Inheritance: The ability to create new classes based on existing classes, inheriting their properties and behaviors.
+4.	Encapsulation: The bundling of data and methods within an object, hiding internal details and providing an interface for interaction.
+5.	Polymorphism: The ability of objects of different classes to respond to the same message or method call in different ways.
+6.	Abstraction: The process of simplifying complex systems by breaking them down into smaller, more manageable parts.
+7.	Message Passing: Objects communicate and interact by sending messages to each other, invoking methods and exchanging data.
 What is Java Package and which package is imported by default?
-Answer:
-
+Answer: Java Package: Mechanism for organizing classes and interfaces.
+         Default Package: java.lang.
 What is an API? List some API's that you have used so far.
-Answer:
-
+Answer: API: Application Programming Interface for software communication, example:GitHub API,Google Maps API...
 Does java support multiple inheritance? Why or why not?
-Answer:
-
-What is method overloading? List all of the different ways to overload.
-Answer:
-
+Answer: No, Java does not support multiple inheritance, Why: to avoid the complications and ambiguities that can arise from inheriting multiple implementations and conflicting method definitions from multiple parent classes.
+What is method overloading? List all of different ways to overload?
+Answer:Overloading method is creating multiple methods with the same name but different parameters.
+ List of different ways to overload are:1.	Different number of parameters.
+                                        2.	Different data types of parameters.
+                                        3.	Different order of parameters.
+                                        4.	Different return types.
 Explain exceptions in java and how to handle them.
-Answer:
-
+Answer: Exceptions in Java: Events that disrupt normal program flow due to errors or exceptional conditions.
+        Handling Exceptions: Use try-catch blocks to catch and handle exceptions, also block can be used to execute code regardless of exceptions.
 What is static keyword? When and how do we use it?
-Answer:
-
+Answer: Static keyword used to declare class-level members (variables or methods) that are shared among all instances.
+Usage: For variables, it creates a single copy shared by all instances. For methods, it allows calling without creating an instance or accessing instance-specific data.
 What is final keyword? When and how do we use it?
-Answer:
-
+Answer:Final keyword:Indicates immutability or restrictions on modification or inheritance.
+Usage: Final variable: Create a constant value.
+       Final method: Prevent method overriding.
+       Final class: Prevent class inheritance.
 Explain the difference between final, finally and finalize?
-Answer:
-
+Answer: 1-Final: Keyword used in Java to declare a variable, method, or class that cannot be modified, overridden, or extended.
+2-Finally: Block of code used in a try-catch-finally structure to ensure certain code executes regardless of whether an exception is thrown or caught.
+3-Finalize: Method in Java's Object class used for object cleanup operations before garbage collection.
 What is a constructor?
-Answer:
-
+Answer: is a special method in a class used for initializing objects of that class. It is called automatically when an object is created and is responsible for initializing the object's state.
 Can we have multiple constructors in a class?
-Answer:
-
+Answer: Yes, it is possible to have multiple constructors in a class.
 If we don't have a constructor declared, what is called during the object creation?
 Answer:
 
