@@ -60,24 +60,42 @@ Answer:-A graph data structure is a collection of nodes connected by edges, repr
 
 What is the difference between the HashTable and HashMap?
 Answer:
+-HashTable is synchronized, HashMap is not.
 
 How do HashMaps work in Java? How do they store values, and when are they useful?
 Answer:
+-HashMaps in Java use hashing to store key-value pairs. They are useful for fast access to values based on keys.
 
 What is ArrayIndexOutOfBoundsException in java? When does it occur?
-Answer:
+Answer: ArrayIndexOutOfBoundsException occurs when you try to access an array element with an invalid index.
 
 What are the different ways of copying an array into another array?
 Answer:
+o	Loop: Iterate and copy elements one by one.
+o	System.arraycopy(): Copies a range of elements from the source to the destination array.
+o	Arrays.copyOf(): Creates a new array and copies elements from the source array.
+o	Arrays.copyOfRange(): Creates a new array and copies a specified range of elements from the source array.
+
 
 What is DFS and BFS?
 Answer:
+DFS is a graph traversal algorithm that explores as far as possible along each branch before backtracking.
+BFS is also a graph traversal algorithm that explores the graph layer by layer.
 
 What is Recursion?
 Answer:
+-Recursion is a programming concept where a function calls itself to solve a problem by breaking it down into smaller instances.
 
 What are linear and non-linear data Structures?
 Answer:
+-Linear data structures have elements arranged sequentially (e.g., arrays, linked lists), while non-linear data structures have complex relationships between elements (e.g., trees, graphs).
 
 Outline different sorting algorithms and their time complexities:
 Answer:
+Bubble Sort: O(n^2)
+Selection Sort: O(n^2)
+Insertion Sort: O(n^2)
+Merge Sort: O(n log n)
+Quick Sort: O(n log n) average and best case, O(n^2) worst case
+Heap Sort: O(n log n)
+Radix Sort: O(d * n)
