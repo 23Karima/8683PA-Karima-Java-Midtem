@@ -2,48 +2,61 @@
 
 Why do we need data structure?
 Answer:
-
-What are the various operations that can be performed on different data structures?
-Answer:
-
+   -Data structures provide efficient and organized ways to store and manipulate data, enabling optimized algorithms and efficient data processin
 When would we use data structures in the real world?
 Answer:
 
 What is an Array?
-Answer:
+Answer: -An array is a data structure that stores a fixed-size sequence of elements of the same type in contiguous memory locations. It provides direct access to elements using an index and allows efficient retrieval and modification of elements.
 
 What is the difference between Array and ArrayList?
-Answer:
+Answer: -the main difference is that an array has a fixed size, while an ArrayList can dynamically grow and shrink its size as elements are added or removed
 
 What is a LinkedList?
-Answer:
+Answer:A LinkedList is a data structure where elements are stored in separate nodes, each containing a reference to the next node. It allows efficient insertion and deletion at both ends but slower access compared to arrays.
 
 How is an Array different from LinkedList?
 Answer:
+1-Array:
+•	Fixed size determined at declaration
+•	Direct access to elements using indices
+•	Efficient random access and traversal
+•	Inefficient insertion and deletion in the middle
+2- LinkedList:
+•	Dynamic size can grow and shrink
+•	Elements stored in separate nodes with references
+•	Efficient insertion and deletion at both ends
+•	Slower random access, requires traversal from head or tail
 
 What is a Queue?
 Answer:
+- A Queue is a data structure that follows the FIFO (First-In-First-Out) principle. Elements are added to the back and removed from the front.
 
 What is a Stack (referring to data structures)?
-Answer:
+Answer: -
+A Stack is a data structure that follows the Last-In-First-Out (LIFO) principle. Elements are added and removed from the top of the stack.
 
 What is FIFO and LIFO?
-Answer:
+Answer:-FIFO: First-In-First-Out (the first element inserted is the first one to be removed).
+       -LIFO: Last-In-First-Out (the last element inserted is the first one to be removed).
 
 Explain Big O Notation?
-Answer:
+Answer:-Big O notation is a way to describe the performance or efficiency of an algorithm. It indicates how the runtime or space requirements of an algorithm grow as the input size increases.
 
 What is the best case to search an element from an array?
-Answer:
+Answer:-The best-case scenario for searching an element in an array is when the element is located at the first index, resulting in a time complexity of O(1).
 
 What is the worst case to search an element from an array?
-Answer:
+Answer:-The worst-case scenario for searching an element in an array is when the element is not present in the array, requiring a linear search through all elements.
 
 Describe what a tree data structure is?
 Answer:
+-A tree data structure is a hierarchical structure composed of nodes connected by edges,
+with a single root node at the top. It organizes elements in a parent-child relationship,
+allowing efficient representation and manipulation of hierarchical relationships.
 
 Describe what a graph data structure is?
-Answer:
+Answer:-A graph data structure is a collection of nodes connected by edges, representing relationships between entities.
 
 What is the difference between the HashTable and HashMap?
 Answer:
@@ -67,4 +80,4 @@ What are linear and non-linear data Structures?
 Answer:
 
 Outline different sorting algorithms and their time complexities:
-
+Answer:
