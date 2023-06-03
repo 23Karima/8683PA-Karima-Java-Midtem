@@ -19,7 +19,7 @@ public class Fibonacci {
     public static void printFibonacciNumbers(int count) {
         int[] fibonacci = new int[count]; // Create an array to store Fibonacci numbers
         fibonacci[0] = 0; // First Fibonacci number is 0
-        fibonacci[1] = 1; // Second Fibonacci number is 1
+        fibonacci[1] = 1; // Second Fibonacci number is 1 .
 
         // Generate Fibonacci numbers starting from the third position
         for (int i = 2; i < count; i++) {
