@@ -99,105 +99,74 @@ Answer: is a special method in a class used for initializing objects of that cla
 Can we have multiple constructors in a class?
 Answer: Yes, it is possible to have multiple constructors in a class.
 If we don't have a constructor declared, what is called during the object creation?
-Answer:
-
+Answer: If a class does not have a constructor declared, a default constructor is automatically provided by the programming language.
 What is "this" keyword in Java? When would we use it?
-Answer:
-
+Answer: The "this" keyword in Java refers to the current instance of a class and is used to differentiate between instance variables and method parameters or local variables with the same name.
 What is "super" keyword in Java? What are some scenarios we would use it?
-Answer:
-
+Answer:-The "super" keyword in Java is used to refer to the superclass (parent class) and is primarily used in scenarios where we need to access superclass members, invoke superclass constructors, or override superclass methods in a subclass.
 What does JVM stand for?
-Answer:
-
+Answer:JVM stands for Java Virtual Machine.
 Is JVM platform independent?
-Answer:
-
+Answer:Yes, JVM (Java Virtual Machine) is platform independent.
 What version of Java are you using?
-Answer:
-
+Answer:java 17.
 What does JAR stand for?
-Answer:
-
+Answer:JAR stands for Java Archive.
 What is the difference between JDK and JVM?
-Answer:
-
+Answer:JDK (Java Development Kit) is a software development kit that includes tools and libraries for developing Java applications, while JVM (Java Virtual Machine) is a runtime environment that executes Java bytecode. JDK is used for developing Java applications, while JVM is responsible for running Java applications on different platforms.
 What is the difference between JVM and JRE?
-Answer:
-
+Answer: JVM (Java Virtual Machine) is the runtime environment that executes Java bytecode, while JRE (Java Runtime Environment) is a package that includes JVM along with libraries and other components required to run Java applications. JRE provides the necessary runtime environment for executing Java applications, while JVM is the core component responsible for executing the bytecode.
 Explain the difference between compile-time and run-time?
-Answer:
-
+Answer: -Compile-time:During compilation,the source code is converted into machine-readable instructions and checked for errors.
+        -Run-time:The compiled code is executed,and the program performs its intended operations.
 What is heap?
-Answer:
-
+Answer: The heap is a region of memory used for dynamic memory allocation in a program. It is where objects and data structures are allocated during runtime.
 How does Java manage its memory?
-Answer:
-
+Answer: Java manages its memory using automatic memory management through a technique called garbage collection. The Java Virtual Machine (JVM) automatically allocates and deallocates memory for objects based on their usage and lifespan, freeing developers from manual memory management tasks.
 What is the difference between String, StringBuffer and StringBuilder?
-Answer:
-
+Answer: String is immutable, StringBuffer is mutable and thread-safe, while StringBuilder is mutable but not thread-safe.
 What is Singleton class?
-Answer:
-
+Answer: A Singleton class is a design pattern that allows the creation of only one instance (object) of a class throughout the application. It ensures that a class has only one instance and provides a global point of access to that instance.
 What is Serialization and Deserialization?
-Answer:
-
+Answer:serialization is the process of converting an object into a byte stream, and deserialization is the process of reconstructing an object from that byte stream.
 Explain the difference between While and Do..While loops?
-Answer:
-
+Answer: while loop checks the condition at the beginning and may not execute the loop at all, while do..while loop executes the loop body at least once before checking the condition.
 What is Enum?
-Answer:
-
+Answer:An enum, short for enumeration, is a special data type in programming languages that represents a set of predefined named values
 What is Iterator?
-Answer:
-
+Answer:An Iterator is an interface that provides a way to iterate over a collection of elements sequentially.
 Which one will take more memory: an int or Integer? Why?
-Answer:
-
+Answer: -An int takes less memory than an Integer because int is a primitive type that directly stores the value, while Integer is an object wrapper class that adds additional overhead for storing the value and providing additional functionalities.
 Why are Strings considered to be immutable in Java?
-Answer:
-
+Answer: Strings are considered immutable in Java because once a string object is created, its value cannot be changed. In other words, you cannot modify the contents of an existing string object. This immutability ensures string objects are thread-safe and can be safely shared across multiple threads without the risk of unexpected modifications.
 What is constructor chaining in Java?
-Answer:
-
+Answer: Constructor chaining in Java refers to the process of calling one constructor from another constructor in the same class or in the superclass.
 The difference between Serial and Parallel Garbage Collector?
-Answer:
-
-What does JIT stands for?
-Answer:
-
+Answer: -Serial garbage collector operates in a single thread, pausing the application during garbage collection, while the parallel garbage collector utilizes multiple threads to perform garbage collection concurrently with the application, potentially reducing pause times.
+What does JIT stand for?
+Answer: JIT stands for Just-In-Time.
 Explain the process of Java garbage collection?
-Answer:
-
+Answer:-Java garbage collection is the automatic process of reclaiming memory occupied by objects that are no longer referenced and considered garbage. It involves marking reachable objects, sweeping and reclaiming memory, and optionally compacting memory to reduce fragmentation.
 Can you guarantee the garbage collection process?
-Answer:
-
+Answer:No.
 What is the difference between stack and heap in Java?
-Answer:
-
+Answer: stack is used for storing local variables and method call information, while the heap is used for dynamically allocating and managing objects during runtime.
 What is reflection in Java and why is it useful?
-Answer:
-
+Answer:-Reflection in Java allows dynamic examination and modification of class structure, methods, and fields at runtime. It is useful for tasks like introspection, dynamic instantiation, and method invocation.
 What is multithreading in Java?
-Answer:
-
+Answer: Multithreading in Java is the ability of a program to execute multiple threads concurrently, allowing multiple tasks or processes to run simultaneously within a single program.
 What is synchronization in Java?
-Answer:
+Answer: Synchronization in Java is a mechanism that allows multiple threads to coordinate and access shared resources in a mutually exclusive manner. It ensures that only one thread can access the synchronized code block or method at a time, preventing data races and maintaining consistency when multiple threads are modifying shared data.
 What is a Framework?
-Answer:
-
+Answer:A framework is a reusable software infrastructure that provides a structure and pre-defined functionalities for building applications.
 What are the testing Frameworks available in Java?
-Answer:
-
+Answer:-JUnit, TestNG, Mockito, Selenium, Cucumber, Arquillian.
 What are jUnit and testNG?
-Answer:
-
+Answer:  are both popular testing frameworks for Java.
 What are the dependencies for this project?
-Answer:
-
+Answer:-depend on its requirements and the libraries chosen by the project developers.
 What is dependency injection in Java?
-Answer:
-
+Answer:is a design pattern that injects dependencies into a class from the outside, promoting loose coupling and improving code modularity.
 Explain what static binding and dynamic binding is?
-Answer:
+Answer:-Static binding occurs during compile-time and refers to binding a method or function call based on the static type of the object.
+-Dynamic binding occurs during runtime and refers to binding a method or function call based on the actual type of the object at runtime.
