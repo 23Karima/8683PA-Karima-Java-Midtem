@@ -32,7 +32,7 @@ public class Anagram {
             Arrays.sort(charArray1);
             Arrays.sort(charArray2);
 
-            // Compare the sorted character arrays
+            // Compare the sorted character arrays .
             return Arrays.equals(charArray1, charArray2);
         }
 
@@ -42,5 +42,4 @@ public class Anagram {
             boolean isAnagram = isAnagram(word1, word2);
             System.out.println(word1 + " and " + word2 + " are anagrams: " + isAnagram);
         }
-
 }
