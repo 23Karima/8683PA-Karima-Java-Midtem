@@ -14,31 +14,45 @@ Answer: An IDE stands for Integrated Development Environment. It is a software a
 An IDE is a software tool that helps programmers write and manage their code effectively.
 What are some of the most popular Java IDEs available in the market?
 Answer:
-
+1.	Eclipse
+2.	IntelliJ IDEA
+3.	NetBeans
+4.	Visual Studio Code (VS Code)
+5.	JDeveloper
+6.	BlueJ
+7.	jGRASP
 Explain the entire java life cycle.
 Answer:
-
+1.	Write Code: using a text editor or an Integrated Development Environment (IDE).
+2.	Compile:  using the Java compiler (javac) into bytecode.
+3.	Load: The Java Virtual Machine (JVM) loads the bytecode into memory.
+4.	Verify: The JVM verifies the bytecode for security.
+5.	Execute: The JVM interprets and executes the bytecode instructions line by line.
+6.	Garbage Collection: The JVM automatically manages memory by performing garbage collection, which reclaims memory occupied by objects that are no longer in use.
+7.	Exception Handling: During execution, if an exception occurs, the JVM catches and handles it according to the exception handling mechanism specified in the code.
+8.	Terminate: The program execution ends either when it reaches the end of the main method or when a specific termination condition is met.
 What is a class?
 Answer:
-
+A class is a blueprint for objects, defining their structure, behavior, and data encapsulation.
 What is an object?
 Answer:
-
+An object is an instance of a class, representing a specific entity or concept with its own state and behavior.
 What is the entry point of a Java project?
 Answer:
-
+The entry point of a Java project is the main() method, which is the starting point for program execution.
 Why is the main() method static?
 Answer:
-
+The main() method is static in Java to allow it to be called without requiring an instance of the class.
 Which class is the superclass of all classes?
 Answer:
-
+The superclass of all classes in Java is the Object class.
 What is difference between path and classpath variables?
 Answer:
-
+The "path" variable is used by the operating system to find executables, while the "classpath" variable is used by the JVM to find Java class files.
 What is the difference between an Interface and Abstract class?
 Answer:
-
+Interface: Collection of abstract methods and constant fields, can be implemented by multiple classes.
+Abstract Class: Class with abstract and non-abstract methods, can be extended by a single subclass.
 Can you make an Object from an Interface and Abstract class? If yes or no, how would you do it?
 Answer:
 
