@@ -15,7 +15,10 @@ public class CollectionView {
 
     public static void main(String[] args) {
 
+        // Create a HashMap object
         HashMap<Integer, String> map = new HashMap<Integer, String>();
+
+        // Insert key-value pairs into the map
         map.put(5, "San Jose");
         map.put(6, "Seattle");
         map.put(2, "LA");
@@ -23,7 +26,15 @@ public class CollectionView {
         map.put(1, "NYC");
         map.put(3, "Denver");
 
-                Collection<String> values = map.values();
-                System.out.println("Collection View of Values: " + values);
-            }
-        }
+        // Retrieve the Collection view of the values in the map
+        Collection<String> values = map.values();
+
+        // Print the collection view of values
+        System.out.println("Collection View of Values: " + values);
+    }
+}
+
+
+
+
+
