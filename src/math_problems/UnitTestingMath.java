@@ -86,7 +86,7 @@ public class UnitTestingMath {
     }
 
     /**
-     * Test the Pattern class.
+     * Test the Pattern class .
      */
     public static void testPattern() {
         System.out.println("Pattern:");
