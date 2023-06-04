@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class FindMissingNumber {
 
     /** INSTRUCTIONS
-     * Write a method to find the missing number from the array.
+     * Write a method to find the missing number from the array .
      */
 
     public static void main(String[] args) {
