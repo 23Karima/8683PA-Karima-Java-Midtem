@@ -29,7 +29,7 @@ public class PrimeNumber {
     }
 
     /**
-     * Checks if a given number is prime.
+     * Checks if a given number is prime .
      *
      * @param number the number to check for primality
      * @return true if the number is prime, false otherwise
