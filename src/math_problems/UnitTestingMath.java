@@ -94,7 +94,7 @@ public class UnitTestingMath {
     }
 
     /**
-     * Test the PrimeNumber class.
+     * Test the PrimeNumber class .
      */
     public static void testPrimeNumber() {
         System.out.println("Prime Numbers:");
