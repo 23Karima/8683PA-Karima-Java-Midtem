@@ -21,7 +21,7 @@ public class LowestNumber {
      * Finds the lowest number in the given array.
      *
      * @param array the array of numbers
-     * @return the lowest number in the array
+     * @return the lowest number in the array.
      */
     public static int findLowestNumber(int[] array) {
         int lowest = array[0]; // Assume the first element is the lowest
