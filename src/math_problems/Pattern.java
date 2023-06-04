@@ -21,7 +21,7 @@ public class Pattern {
                 start -= 10;      // Decrease by 10 if at the end of each block
                 decrement++;     // Increment the decrement value
             } else {
-                start -= decrement;  // Decrease by the current decrement value
+                start -= decrement;  // Decrease by the current decrement value.
             }
         }
     }
