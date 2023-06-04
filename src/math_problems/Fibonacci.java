@@ -2,7 +2,8 @@ package math_problems;
 
 public class Fibonacci {
 
-    /** INSTRUCTIONS
+    /**
+     * INSTRUCTIONS
      * Write a method that will print or return at least 40 Fibonacci number
      * e.g. - 0,1,1,2,3,5,8,13
      **/
@@ -14,6 +15,7 @@ public class Fibonacci {
 
     /**
      * Prints the specified number of Fibonacci numbers.
+     *
      * @param count The number of Fibonacci numbers to print.
      */
     public static void printFibonacciNumbers(int count) {
@@ -31,5 +33,19 @@ public class Fibonacci {
             System.out.print(fibonacci[i] + " ");
         }
     }
+    public static int[] generateFibonacciSequence(int count) {
+        int[] sequence = new int[count];
+        if (count >= 1) {
+            sequence[0] = 0;
+        }
+        if (count >= 2) {
+            sequence[1] = 1;
+        }
+        for (int i = 2; i < count; i++) {
+            sequence[i] = sequence[i - 1] + sequence[i - 2];
+        }
+        return sequence;
+    }
+
 }
 

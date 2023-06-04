@@ -25,4 +25,17 @@ public class Pattern {
             }
         }
     }
+    public static void generatePattern() {
+        int start = 100;
+        int decrement = 1;
+
+        for (int i = start; i >= 0; i -= decrement) {
+            System.out.print(i + " ");
+
+            decrement++;
+            if (decrement == 10) {
+                decrement = 1;
+            }
+        }
+    }
 }

@@ -1,6 +1,8 @@
 package data_structures;
 
+import java.util.Collection;
 import java.util.HashMap;
+
 
 public class CollectionView {
 
@@ -21,6 +23,7 @@ public class CollectionView {
         map.put(1, "NYC");
         map.put(3, "Denver");
 
-    }
-
-}
+                Collection<String> values = map.values();
+                System.out.println("Collection View of Values: " + values);
+            }
+        }

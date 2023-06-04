@@ -12,32 +12,27 @@ public class Factorial {
      */
 
     public static void main(String[] args) {
-
         int number = 5;
-
-        //  recursion
-        long factorialRecursive = calculateFactorialRecursive(number);
-        System.out.println("Factorial (Recursive): " + factorialRecursive);
-
-        //  iteration
-        long factorialIterative = calculateFactorialIterative(number);
-        System.out.println("Factorial (Iterative): " + factorialIterative);
+        System.out.println("Factorial using recursion: " + factorialRecursive(number));
+        System.out.println("Factorial using iteration: " + factorialIterative(number));
     }
 
-    //  calculate factorial
-    public static long calculateFactorialRecursive(int number) {
+    // Method to calculate factorial using recursion
+    public static int factorialRecursive(int number) {
         if (number == 0 || number == 1) {
             return 1;
+        } else {
+            return number * factorialRecursive(number - 1);
         }
-        return number * calculateFactorialRecursive(number - 1);
     }
-    // Iterative method to calculate factorial
-    public static long calculateFactorialIterative(int number) {
-        long factorial = 1;
-        for (int i = 2; i <= number; i++) {
-            factorial *= i;
+
+    // Method to calculate factorial using iteration
+    public static int factorialIterative(int number) {
+        int result = 1;
+        for (int i = 1; i <= number; i++) {
+            result *= i;
         }
-        return factorial;
+        return result;
     }
 }
 

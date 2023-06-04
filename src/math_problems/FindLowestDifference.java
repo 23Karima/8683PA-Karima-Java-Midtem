@@ -12,7 +12,7 @@ public class FindLowestDifference {
         int[] array1 = {30, 12, 5, 9, 2, 20, 33, 1, -15};
         int[] array2 = {18, 25, 41, 47, 17, 36, 14, 19, -15};
         int lowestNumber = findLowestDifference(array1, array2);
-        System.out.println("The lowest number not shared between the arrays is: " + lowestNumber);
+        System.out.println("The lowest number between the 2 arrays is: " + lowestNumber);
     }
 
     public static int findLowestDifference(int[] array1, int[] array2) {
