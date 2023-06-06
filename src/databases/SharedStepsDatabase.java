@@ -16,6 +16,10 @@ public class SharedStepsDatabase {
 
     private static Properties prop;
     public static Connection connect = null;
+
+    public SharedStepsDatabase(Connection connect) {
+        this.connect = connect;
+    }
     public static Statement statement = null;
     public static PreparedStatement ps = null;
     public static ResultSet resultSet = null;
@@ -24,6 +28,7 @@ public class SharedStepsDatabase {
     private static final File file = new File(systemPath + propPath);
 
     public SharedStepsDatabase() {
+
         prop = loadProperties();
 
         if (prop != null) {

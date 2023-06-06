@@ -1,99 +1,106 @@
 package databases;
 
-import java.sql.ResultSet;
-import java.text.Format;
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.util.ArrayList;
-import java.util.Formatter;
 import java.util.HashMap;
 import java.util.List;
 
 public class UnitTestConnectDB {
 
-    /**
-     * Use this class to unit test the SharedStepsDatabase class
-     */
-
     public static void main(String[] args) throws Exception {
+        // Database connection details
+        String url = "jdbc:mysql://localhost:3306/sakila";
+        String username = "your_username";
+        String password = "your_password";
 
-        SharedStepsDatabase ssdb = new SharedStepsDatabase();
+        // Establish the connection
+        Connection connection = null;
+        SharedStepsDatabase ssdb = null;
 
-        // region ExecuteQueryReadOne
-//        String query = "SELECT * FROM EMPLOYEES.EMPLOYEES LIMIT 10";
-//        String result = ssdb.executeQueryReadOne(query);
-//
-//        System.out.println(result);
-        // endregion
+        try {
+            Connection connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/sakila", "root", "admin");
+            ssdb = new SharedStepsDatabase(connect);
 
-        // region executeQueryReadAllSingleColumn
-//        String queryTwo = "SELECT * FROM EMPLOYEES.EMPLOYEES LIMIT 10";
-//        List<String> results = ssdb.executeQueryReadAllSingleColumn(queryTwo, "last_name");
-//
-//        for (String s : results) {
-//            System.out.println(s);
-//        }
+  // region ExecuteQueryReadOne ,me here I'm changing the queries because I'm used sakila DB.
+            String query = "SELECT * FROM sakila.actor LIMIT 10";
+            String result = ssdb.executeQueryReadOne(query);
 
-        // endregion
+            System.out.println(result);
+            // endregion
 
-        // region executeQueryReadAll
-//        String queryThree = "SELECT * FROM EMPLOYEES.EMPLOYEES E " +
-//                       "INNER JOIN EMPLOYEES.DEPT_EMP DE ON E.EMP_NO = DE.EMP_NO " +
-//                       "WHERE E.FIRST_NAME LIKE 'Alain'";
-//
-//        List<List<String>> data = ssdb.executeQueryReadAll(queryThree);
-//
-//        if (data != null) {
-//            for (List<String> row : data) {
-//                for (String cell : row) {
-//                    System.out.print(cell + "\t\t");
-//                }
-//                System.out.println();
-//            }
-//        }
+            // region executeQueryReadAllSingleColumn
+            String queryTwo = "SELECT * FROM sakila.actor LIMIT 10";
+            List<String> results = ssdb.executeQueryReadAllSingleColumn(queryTwo, "last_name");
 
-        // endregion
+            for (String s : results) {
+                System.out.println(s);
+            }
 
-        // region InsertString
-//        ssdb.insertString("test_insert_string", "test_string", "Testing String Insertion");
-//        System.out.println(ssdb.executeQueryReadAllSingleColumn("SELECT * FROM TEST_INSERT_STRING", 2).get(0));
+            // endregion
 
-        // endregion
+            // region executeQueryReadAll
+            String queryThree = "SELECT * FROM sakila.actor WHERE first_name LIKE 'Al%'";
+            List<List<String>> data = ssdb.executeQueryReadAll(queryThree);
 
-        // region insertList
-//        List<Object> names = new ArrayList<>();
-//        names.add("Student1");
-//        names.add("Student2");
-//
-//        ssdb.insertList("test_insert_list", "test_list", names);
-//
-//        String query = "SELECT * FROM TEST_INSERT_LIST";
-//        List<String> results = ssdb.executeQueryReadAllSingleColumn(query, "test_list");
-//
-//        for (String s: results) {
-//            System.out.println(s);
-//        }
+            if (data != null) {
+                for (List<String> row : data) {
+                    for (String cell : row) {
+                        System.out.print(cell + "\t\t");
+                    }
+                    System.out.println();
+                }
+            }
+            // endregion
 
-        // endregion
+            // region InsertString
+            ssdb.insertString("test_insert_string", "test_string", "Testing String Insertion");
+            System.out.println(ssdb.executeQueryReadAllSingleColumn("SELECT * FROM test_insert_string", 2).get(0));
+            // endregion
 
-        // region insertMap
-//        HashMap<Object, Object> map = new HashMap<>();
-//        map.put("Student1", 7934);
-//        map.put("Student2", 6319);
-//
-//        ssdb.insertMap("test_insert_map", map);
-//
-//        String query = "SELECT * FROM TEST_INSERT_MAP";
-//        List<List<String>> results = ssdb.executeQueryReadAll(query);
-//
-//        for (List<String> row : results) {
-//            for (String cell : row) {
-//                System.out.print(cell + "\t\t");
-//            }
-//            System.out.println();
-//        }
+            // region insertList
+            List<Object> names = new ArrayList<>();
+            names.add("Actor1");
+            names.add("Actor2");
 
-        // endregion
+            ssdb.insertList("test_insert_list", "test_list", names);
 
-        ssdb.closeResources();
+            String queryFour = "SELECT * FROM test_insert_list";
+            List<String> resultsList = ssdb.executeQueryReadAllSingleColumn(queryFour, "test_list");
 
+            for (String s : resultsList) {
+                System.out.println(s);
+            }
+            // endregion
+
+            // region insertMap
+            HashMap<Object, Object> map = new HashMap<>();
+            map.put("Actor1", 7934);
+            map.put("Actor2", 6319);
+
+            ssdb.insertMap("test_insert_map", map);
+
+            String queryFive = "SELECT * FROM test_insert_map";
+            List<List<String>> resultsMap = ssdb.executeQueryReadAll(queryFive);
+
+            for (List<String> row : resultsMap) {
+                for (String cell : row) {
+                    System.out.print(cell + "\t\t");
+                }
+                System.out.println();
+            }
+            // endregion
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            // Close the connection and resources
+            if (ssdb != null) {
+                ssdb.closeResources();
+            }
+            if (connection != null) {
+                connection.close();
+            }
+        }
     }
 }
